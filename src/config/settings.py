@@ -8,7 +8,7 @@ class Settings(BaseSettings):
     search_engine_id: Optional[str] = None
 
     # Model Configuration
-    onnx_model_path: str = "./models/model.onnx"
+    onnx_model_path: str = "./models/gemma.onnx"
     tokenizer_name: str = "organization/model"
     max_context_length: int = 512
     max_generation_tokens: int = 150
@@ -23,6 +23,3 @@ class Settings(BaseSettings):
 
     class Config:
         env_file = ".env"
-
-# instância global de configurações
-settings = Settings()
